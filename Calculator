@@ -1,18 +1,18 @@
 # calculator.py
 
 def add(x, y):
-    return x + y
+    return x + y   # Сложение
 
 def subtract(x, y):
-    return x - y
+    return x - y   # Вычитание
 
 def multiply(x, y):
-    return x * y
+    return x * y   # Умножение
 
 def divide(x, y):
     if y == 0:
         return "Ошибка: деление на ноль!"
-    return x / y
+    return x / y   # Деление
 
 def main():
     print("Выберите операцию:")
