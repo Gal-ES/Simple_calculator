@@ -1,18 +1,26 @@
 # calculator.py
 
 def add(x, y):
-    return x + y
+    return x + y   # Сложение
 
 def subtract(x, y):
-    return x - y
+    return x - y   # Вычитание
 
 def multiply(x, y):
-    return x * y
+    return x * y   # Умножение
 
 def divide(x, y):
     if y == 0:
         return "Ошибка: деление на ноль!"
-    return x / y
+    return x / y   # Деление
+
+def power(x, y):
+    return x ** y
+
+def square_root(x):
+    if x < 0:
+        return "Ошибка: корень из отрицательного числа!"
+    return x ** 0.5
 
 def main():
     print("Выберите операцию:")
@@ -20,10 +28,12 @@ def main():
     print("2. Вычитание")
     print("3. Умножение")
     print("4. Деление")
+    print("5. Возведение в степень")
+    print("6. Квадратный корень")
 
-    choice = input("Введите номер операции (1/2/3/4): ")
+    choice = input("Введите номер операции (1/2/3/4/5/6): ")
 
-    if choice in ['1', '2', '3', '4']:
+    if choice in ['1', '2', '3', '4', '5']:
         num1 = float(input("Введите первое число: "))
         num2 = float(input("Введите второе число: "))
 
@@ -35,6 +45,11 @@ def main():
             print(f"Результат: {multiply(num1, num2)}")
         elif choice == '4':
             print(f"Результат: {divide(num1, num2)}")
+        elif choice == '5':
+            print(f"Результат: {power(num1, num2)}")
+    elif choice == '6':
+        num = float(input("Введите число: "))
+        print(f"Результат: {square_root(num)}")
     else:
         print("Неверный ввод")
 
